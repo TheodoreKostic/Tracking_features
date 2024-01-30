@@ -12,4 +12,4 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 <p>Added the Tracking_h5.ipynb Jupyter notebook with purpose of checking the validity of data.</p>
 <p>Updating MURAM_exp.ipynb with additional testing of polarisation and vertical component of magnetic field. Correlation checked.</p>
-<p>Updated Tau.ipynb - added code regarding convolution of velocities and a gaussian; correlation between ***filtered*** velocities checked.</p>
+<p>Updated Tau.ipynb - added code regarding convolution of velocities and a gaussian; correlation between <b><i>filtered</i></b> velocities checked.</p>
