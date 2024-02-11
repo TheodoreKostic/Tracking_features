@@ -16,3 +16,6 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 `1. 2. 2024.`
 <p>In Tau_ipynb added the visual representation of correlation between <b><i>filtered</i></b> velocities.</p>
+
+`11. 2. 2024.`
+<p>Tau_ipynb - fixed the convolution by using gaussian_filter function instead of convolve.</p>
