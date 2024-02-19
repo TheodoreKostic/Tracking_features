@@ -19,3 +19,6 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 `11. 2. 2024.`
 <p>Tau_ipynb - fixed the convolution by using gaussian_filter function instead of convolve.</p>
+
+`20. 2. 2024.`
+<p>COBOL_TIME.ipynb added. Basic check up done. FLCT doesn't produce expected results...</p>
