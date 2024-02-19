@@ -23,5 +23,6 @@ Various codes that are implementation of feature tracking; Data used comes from 
 `20. 2. 2024.`
 <p>COBOL_TIME.ipynb added. Basic check up done. FLCT doesn't produce expected results...</p>
 <p>COBOL_TIME.ipynb, eventhough crude needs to be run on SUPERAST.</p>
-> [!WARNING]
-> Pearson's coefficient is very low at the moment.
+
+> [!IMPORTANT]
+> Pearson's coefficient is very low at the moment. Advised to check alternative metods.
