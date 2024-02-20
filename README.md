@@ -26,3 +26,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 > [!IMPORTANT]
 > Pearson's coefficient is very low at the moment. Advised to check alternative metods.
+
+<p>
+  Added extract.py and Extract_series.py as an expansion of functionality - a light python script that will be used in conjunction with 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/COBOL_TIME.ipynb">COBOL_TIME.ipynb</a>.
+</p>
