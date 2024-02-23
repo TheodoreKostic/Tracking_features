@@ -10,6 +10,7 @@ import h5py
 import sys
 import os
 import pyflct
+from scipy.stats import pearsonr
 
 # Initializing list of names of all the files
 filenames = []
@@ -37,9 +38,10 @@ Vy_series = np.zeros([NT, NX, NY])
 Vz_series = np.zeros([NT, NX, NY])
 
 # The depth we are "looking at"
-d_T = 22 # will mostly be using and changing this one and the one for Bz
-d_Bz = 22
-
+d_T = input("Please enter a number in range (0, 40)")
+d_T = int(d_T) # will mostly be using and changing this one and the one for Bz
+d_Bz = input("Please enter a number in range(0, 40)")
+d_Bz = int(d_Bz)
 T_series[0] = np.copy(tempfile['T'][d_T].T)
 Bz_series[0] = np.copy(tempfile['bz'][d_Bz].T)
 Vx_series[0] = np.copy(tempfile['vx'][d_T].T)
@@ -88,10 +90,78 @@ vy2 = Vy_series[2].reshape(240, 2, 240, 2)
 vx12 = (vx1 + vx2).mean(axis = 3).mean(axis = 1)/1e5
 vy12 = (vy1 + vy2).mean(axis = 3).mean(axis = 1)/1e5
 
-from scipy.stats import pearsonr
+
 
 r12x = pearsonr(vel_x123.flatten(), vx12.flatten())
 print(r12x)
 
 r12y = pearsonr(vel_y123.flatten(), vy12.flatten())
 print(r12y)
+
+# Recreate former code for all values of Bz_series
+Vel_x = []
+Vel_y = []
+Vm = []
+Bz_bin = []
+
+for j in range(0, NT):
+    Bz = Bz_series[j].reshape(240, 2, 240, 2)
+    Bz_bin.append(Bz)
+    #Bz_beam = (Bz_series[j] + Bz_series[j+1]).mean(axis = 3).mean(axis = 1)
+    #print(Bz_beam)
+    #Vel_x[j], Vel_y[j], Vm[j] = pyflct.flct(Bz_beam[j], Bz_beam[j+1], 1*30, 1*50, 5.0)
+Bz_bin = np.array(Bz_bin)
+Bz_mean = []
+for j in range(1, NT):
+    Bz_mean_ = (Bz_bin[j-1] + Bz_bin[j]).mean(axis = 3).mean(axis = 1)
+    Bz_mean.append(Bz_mean_)
+    
+for j in range(1, len(Bz_mean)):
+    vel_x, vel_y, vm = pyflct.flct(Bz_mean[j-1], Bz_mean[j], 1*30, 1*50, 5.0)
+    Vel_x.append(vel_x)
+    Vel_y.append(vel_y)
+    Vm.append(vm)
+
+Vx = []
+Vy = []
+for j in range(0, NT):
+    vx = Vx_series[j].reshape(240, 2, 240, 2)
+    Vx.append(vx)
+    vy = Vy_series[j].reshape(240, 2, 240, 2)
+    Vy.append(vy)
+Vx_mean = []
+Vy_mean = []
+for j in range(1, len(Vx)):
+    vx_mean = (Vx[j-1] + Vx[j]).mean(axis = 3).mean(axis = 1)/1e5
+    vy_mean = (Vy[j-1] + Vy[j]).mean(axis = 3).mean(axis = 1)/1e5
+    Vx_mean.append(vx_mean)
+    Vy_mean.append(vy_mean)
+
+Pearson__x = []
+Pearson__y = []
+for j in range(1, len(Vel_x)):
+    p_x = pearsonr(Vx_mean[j-1].flatten(), Vel_x[j-1].flatten())
+    Pearson__x.append(p_x)
+    p_y = pearsonr(Vy_mean[j-1].flatten(), Vel_y[j-1].flatten())
+    Pearson__y.append(p_y)
+    print("Pearson for x:{}".format(p_x))
+    print("Pearson for y:{}".format(p_y))
+
+# Find the maximum pearson's coefficient and corresponding index
+"""Max__x__p = PearsonRResult(0, 0)
+index_for_x = 0
+for j in range(len(Pearson__x)):
+    if Pearson__x[j] > Max__x__p:
+        Max__x__p = Pearson__x[j]
+        index_for_x = Pearson__x.index(max)
+
+
+Max__y__p = PearsonRResult(0, 0)
+index_for_y = 0
+for j in range(len(Pearson__y)):
+    if Pearson__y[j] > Max__y__p:
+        Max__y__p = Pearson__y[j]
+        index_for_y = Pearson__y.index(max)
+
+print("Maximum Pearson coefficient {} is found for layer {} regarding x component of velocity".format(Max__x__p, index_for_x))
+print("Maximum Pearson coefficient {} is found for layer {} regarding y component of velocity".format(Max__y__p, index_for_y))"""
