@@ -31,3 +31,10 @@ Various codes that are implementation of feature tracking; Data used comes from 
   Added extract.py and Extract_series.py as an expansion of functionality - a light python script that will be used in conjunction with 
   <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/COBOL_TIME.ipynb">COBOL_TIME.ipynb</a>.
 </p>
+
+`23. 2. 2024.`
+<p>
+  Updated 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Extract_series.py">Extracted_series.py</a>
+  with loop through all the files and determining correlation between FLCT velocities and velocities given in simulation.
+</p>
