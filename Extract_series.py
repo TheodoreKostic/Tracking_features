@@ -20,7 +20,7 @@ for file in sorted(os.listdir (os.getcwd())):
 	if file.endswith(".h5"):
 		#print (file)
 		filenames.append(file)
-print (len(filenames))
+print ("How many files are in directory: {}".format(len(filenames)))
 
 # Setting the new array length as the number of h5 files
 NT = len(filenames)
@@ -38,9 +38,9 @@ Vy_series = np.zeros([NT, NX, NY])
 Vz_series = np.zeros([NT, NX, NY])
 
 # The depth we are "looking at"
-d_T = input("Please enter a number in range (0, 40)")
+d_T = input("Please enter a number in range (0, 40): ")
 d_T = int(d_T) # will mostly be using and changing this one and the one for Bz
-d_Bz = input("Please enter a number in range(0, 40)")
+d_Bz = input("Please enter a number in range (0, 40): ")
 d_Bz = int(d_Bz)
 T_series[0] = np.copy(tempfile['T'][d_T].T)
 Bz_series[0] = np.copy(tempfile['bz'][d_Bz].T)
@@ -148,20 +148,52 @@ for j in range(1, len(Vel_x)):
     print("Pearson for y:{}".format(p_y))
 
 # Find the maximum pearson's coefficient and corresponding index
-"""Max__x__p = PearsonRResult(0, 0)
+"""
+Max__x__p = pearsonr(0, 0)
 index_for_x = 0
 for j in range(len(Pearson__x)):
-    if Pearson__x[j] > Max__x__p:
-        Max__x__p = Pearson__x[j]
+    if Pearson__x[j].statistic > Max__x__p:
+        Max__x__p = Pearson__x[j].statistic
         index_for_x = Pearson__x.index(max)
 
 
-Max__y__p = PearsonRResult(0, 0)
+Max__y__p = pearsonr(0, 0)
 index_for_y = 0
 for j in range(len(Pearson__y)):
-    if Pearson__y[j] > Max__y__p:
-        Max__y__p = Pearson__y[j]
+    if Pearson__y[j].statistic > Max__y__p:
+        Max__y__p = Pearson__y[j].statistic
         index_for_y = Pearson__y.index(max)
 
 print("Maximum Pearson coefficient {} is found for layer {} regarding x component of velocity".format(Max__x__p, index_for_x))
-print("Maximum Pearson coefficient {} is found for layer {} regarding y component of velocity".format(Max__y__p, index_for_y))"""
+print("Maximum Pearson coefficient {} is found for layer {} regarding y component of velocity".format(Max__y__p, index_for_y))
+"""
+# Next, we would like to try to use gaussian_filter to convolve or "filter" our velocities 
+# before we search for correlation 
+from scipy.ndimage import gaussian_filter
+# For velocities derived through FLCT
+filter__x = []
+filter__y = []
+for j in range(0, len(Vel_x)):
+    filtered_x = gaussian_filter(Vel_x[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__x.append(filtered_x)
+    filtered_y = gaussian_filter(Vel_y[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__y.append(filtered_y)
+# For velocities that come from simulation
+filter__x_sim = []
+filter__y_sim = []
+for j in range(0, len(Vx_mean)):
+    filterx = gaussian_filter(Vx_mean[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__x_sim.append(filterx)
+    filtery = gaussian_filter(Vy_mean[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__y_sim.append(filtery)
+
+print(len(filter__x))
+print(len(filter__x_sim))
+# Now to the correlation part
+r_x = [] # for filtered x from FLCT
+r_y = [] # for filtered y from FLCT
+for j in range(0, len(filter__x)):
+    valx = pearsonr(filter__x[j], filter__x_sim[j])
+    r_x.append(valx)
+    valy = pearsonr(filter__y[j], filter__y_sim[j])
+    r_y.append(valy)
