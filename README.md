@@ -46,3 +46,12 @@ Various codes that are implementation of feature tracking; Data used comes from 
   The depth is constant and the moments in time series which were used for comparison were arbitrarily chosen.<br>
   Depth or layer at which we are "looking at" can be changed in script and we will need to find the one with best results.
 </p>
+
+`27. 2. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Extract_basic.py">Extracted_basic.py</a>,
+  a python script that writes T, B_z, V_x, V_y, V_z to a fits file and then compares these V_x and V_y averaged between every
+  two adjacent timestamps in our timeseries and V_x and V_y derived using FLCT on T (temperature) and B_z (z-component of magnetic field).
+  The result are two scatter plots that compare said velocities in order to visualise the correlation or lack thereof.
+</p>
