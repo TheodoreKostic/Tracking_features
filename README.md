@@ -43,6 +43,6 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>
   Extracted_series.py updated: added the <b>gaussian_filter</b> convolution before checking the value of Pearson's coefficient. <br>
   COBOL_TIME.ipynb updated: using the data stored in fits file (look  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/    Extract_series.py">Extracted_series.py</a>) determined that the correlation between the velocities from simulation and velocities that FLCT calculated is low.
-  The depth is constant and the moments in time series which were used for comparison were arbitrary chosen.<br>
+  The depth is constant and the moments in time series which were used for comparison were arbitrarily chosen.<br>
   Depth or layer at which we are "looking at" can be changed in script and we will need to find the one with best results.
 </p>
