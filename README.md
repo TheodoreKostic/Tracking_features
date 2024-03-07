@@ -55,3 +55,12 @@ Various codes that are implementation of feature tracking; Data used comes from 
   two adjacent timestamps in our timeseries and V_x and V_y derived using FLCT on T (temperature) and B_z (z-component of magnetic field).
   The result are two scatter plots that compare said velocities in order to visualise the correlation or lack thereof.
 </p>
+
+`07. 3. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Histogram.py">Histogram.py</a>,
+  a python script that makes use of fits file and plots histograms of x component velocity of average velocity from simulation
+  and velocities derived from the said simulation using FLCT on temperature and z component of magnetic field. Will be updated 
+  to do the same using y components, as well as to study statistics more closely.
+</p>
