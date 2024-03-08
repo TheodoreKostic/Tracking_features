@@ -56,6 +56,7 @@ a = np.asarray(a)
 hist1, hist1_edges = np.histogram(a, density = True)
 plt.hist(hist1, bins = 'auto')
 plt.title("Real Vx, 3")
+plt.savefig("RealVx3.png")
 plt.show()
 
 b = [Vx_mean[27], Vx_mean[28], Vx_mean[29], Vx_mean[30], Vx_mean[31]]
@@ -63,6 +64,7 @@ b = np.asarray(b)
 hist2, hist2_edges = np.histogram(b, density = True)
 plt.hist(hist2, bins = 'auto')
 plt.title("Real Vx, 5")
+plt.savefig("RealVx5.png")
 plt.show()
 
 c = [Vx_mean[24], Vx_mean[25], Vx_mean[26], Vx_mean[27], Vx_mean[28], Vx_mean[29], Vx_mean[30], Vx_mean[31], Vx_mean[32], Vx_mean[33], Vx_mean[34]]
@@ -70,6 +72,7 @@ c = np.asarray(c)
 hist3, hist3_edges = np.histogram(c, density = True)
 plt.hist(hist3, bins = 'auto')
 plt.title("Real Vx, 10")
+plt.savefig("RealVx10.png")
 plt.show()
 
 # FLCT Bz histogram
@@ -78,6 +81,7 @@ aa = np.asarray(aa)
 hist1Bz, hist1Bz_edges = np.histogram(aa, density = True)
 plt.hist(hist1Bz, bins = 'auto')
 plt.title("FLCT Bz Vx, 3")
+plt.savefig("FLCTBZ3.png")
 plt.show()
 
 bb = [Vel_x_Bz[27], Vel_x_Bz[28], Vel_x_Bz[29], Vel_x_Bz[30], Vel_x_Bz[31]]
@@ -120,14 +124,18 @@ plt.show()
 histogram_vx, hedges = np.histogram(np.asarray(Vx_mean).flatten(), density = True)
 plt.hist(histogram_vx, bins = 'auto')
 plt.title("Real Vx")
+plt.savefig("RealVxALL.png")
 plt.show()
 
 histogram_vxT, hedgesT = np.histogram(np.asarray(Vel_x_T).flatten(), density = True)
 plt.hist(histogram_vxT, bins = 'auto')
 plt.title("FLCT T Vx")
+plt.savefig("FLCT_T_ALL.png")
 plt.show()
 
 histogram_vxB, hedgesB = np.histogram(np.asarray(Vel_x_Bz).flatten(), density = True)
 plt.hist(histogram_vxB, bins = 'auto')
 plt.title("FLCT Bz Vx")
+plt.savefig("FLCT_BZ_ALL.png")
 plt.show()
+
