@@ -72,4 +72,5 @@ Various codes that are implementation of feature tracking; Data used comes from 
   a python script that makes uses fits file to import V<sub>x</sub>, V<sub>y</sub>, T and B<sub>z</sub> values for the specific layer of Sun's photosphere in order
   to compare those simulation values with the FLCT-derived values for horizontal velocities and calculates the correlation
   between them.
+  Also does the same type of comparison after filtering velocities using gaussian filter.
 </p>
