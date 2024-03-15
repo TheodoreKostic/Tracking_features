@@ -14,7 +14,7 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>Updating MURAM_exp.ipynb with additional testing of polarisation and vertical component of magnetic field. Correlation checked.</p>
 <p>Updated Tau.ipynb - added code regarding convolution of velocities and a gaussian; correlation between <b><i>filtered</i></b> velocities checked.</p>
 
-`1. 2. 2024.`
+`01. 2. 2024.`
 <p>In Tau_ipynb added the visual representation of correlation between <b><i>filtered</i></b> velocities.</p>
 
 `11. 2. 2024.`
@@ -63,4 +63,13 @@ Various codes that are implementation of feature tracking; Data used comes from 
   a python script that makes use of fits file and plots histograms of x component velocity of average velocity from simulation
   and velocities derived from the said simulation using FLCT on temperature and z component of magnetic field. Will be updated 
   to do the same using y components, as well as to study statistics more closely.
+</p>
+
+`15. 3. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Velocity_diff.py">Velocity_diff.py</a>,
+  a python script that makes uses fits file to import Vx, Vy, T and Bz values for the specific layer of Sun's photosphere in order
+  to compare those simulation values with the FLCT-derived values for horizontal velocities and calculates the correlation
+  between them.
 </p>
