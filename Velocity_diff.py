@@ -68,3 +68,44 @@ for j in range(1, len(Vel_x_Bz)):
     Pearson__yBz.append(p_y)
     print("Pearson for x:{}".format(p_x))
     print("Pearson for y:{}".format(p_y))
+
+
+
+
+# Filtered velocities
+from scipy.ndimage import gaussian_filter
+# For velocities derived through FLCT
+filter__x = []
+filter__y = []
+for j in range(0, len(Vel_x_Bz)):
+    filtered_x = gaussian_filter(Vel_x_Bz[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__x.append(filtered_x)
+    filtered_y = gaussian_filter(Vel_y_Bz[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__y.append(filtered_y)
+# For velocities that come from simulation
+filter__x_sim = []
+filter__y_sim = []
+for j in range(0, len(Vx_diff)):
+    filterx = gaussian_filter(Vx_diff[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__x_sim.append(filterx)
+    filtery = gaussian_filter(Vy_diff[j].flatten(), sigma = 4, mode = 'wrap')
+    filter__y_sim.append(filtery)
+
+print(len(filter__x))
+print(len(filter__x_sim))
+# Now to the correlation part
+r_x = [] # for filtered x from FLCT
+r_y = [] # for filtered y from FLCT
+filter__x = np.asarray(filter__x)
+filter__y = np.asarray(filter__y)
+filter__x_sim = np.asarray(filter__x_sim)
+filter__y_sim = np.asarray(filter__y_sim)
+for j in range(0, len(filter__x)):
+    valx = pearsonr(filter__x[j], filter__x_sim[j])
+    r_x.append(valx)
+    valy = pearsonr(filter__y[j], filter__y_sim[j])
+    r_y.append(valy)
+
+print(r_x)
+print("--------------------------")
+print(r_y)
