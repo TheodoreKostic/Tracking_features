@@ -51,8 +51,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>
   Added 
   <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Extract_basic.py">Extracted_basic.py</a>,
-  a python script that writes T, B_z, V_x, V_y, V_z to a fits file and then compares these V_x and V_y averaged between every
-  two adjacent timestamps in our timeseries and V_x and V_y derived using FLCT on T (temperature) and B_z (z-component of magnetic field).
+  a python script that writes T, B<sub>z</sub>, V<sub>x</sub>, V<sub>y</sub> V<sub>z</sub> to a fits file and then compares these V<sub>x</sub> and V<sub>y</sub> averaged between every
+  two adjacent timestamps in our timeseries and V<sub>x</sub> and V<sub>y</sub> derived using FLCT on T (temperature) and B<sub>z</sub> (z-component of magnetic field).
   The result are two scatter plots that compare said velocities in order to visualise the correlation or lack thereof.
 </p>
 
@@ -69,7 +69,7 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>
   Added 
   <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Velocity_diff.py">Velocity_diff.py</a>,
-  a python script that makes uses fits file to import Vx, Vy, T and Bz values for the specific layer of Sun's photosphere in order
+  a python script that makes uses fits file to import V<sub>x</sub>, V<sub>y</sub>, T and B<sub>z</sub> values for the specific layer of Sun's photosphere in order
   to compare those simulation values with the FLCT-derived values for horizontal velocities and calculates the correlation
   between them.
 </p>
