@@ -74,3 +74,16 @@ Various codes that are implementation of feature tracking; Data used comes from 
   between them.
   Also does the same type of comparison after filtering velocities using gaussian filter.
 </p>
+
+`21. 3. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Write_to_fits.py">Write_to_fits.py</a>, which
+  writes T, V<sub>x</sub>, V<sub>y</sub>, V<sub>z</sub>, B<sub>z</sub> and bolometric magnitude into a fits file,
+  <br>
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FLCT_calc.py">FLCT_calc.py</a> 
+  which uses FLCT algorithm in conjuction with T, B<sub>z</sub> and bolometric magnitude to calculate velocities
+  and <br>
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Corr_calculation.py">Corr_calculation.py</a>, which
+  compares aforementioned velocities with the ones from simulation.
+</p>
