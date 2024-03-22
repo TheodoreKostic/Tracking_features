@@ -24,12 +24,19 @@ for j in range(1, len(Vx)):
     vy = (Vy[j-1] + Vy[j])/2/1e5
     Vy_mean.append(vy)
 
+# How to choose sigma? Maybe do it so FWHM ~ 1000 km, and then calculate from pixelsize? 
+pixelsize = 48.0 # in km
+
+FWHM = 1200.0 # Following Verma, Denker, et al. 
+sigma_pyflct = FWHM / pixelsize / 2.35
+delta_t = 30.0 # in seconds 
+
 # Now, we implement FLCT on our Temp array
 Vel_x_T = []
 Vel_y_T = []
 Vm_T = []
 for j in range(1, len(Temp)):
-    vel_x, vel_y, vm = pyflct.flct(Temp[j-1], Temp[j], 1*30, 1*48, 5.0)
+    vel_x, vel_y, vm = pyflct.flct(Temp[j-1], Temp[j], delta_t, pixelsize, sigma_pyflct)
     Vel_x_T.append(vel_x)
     Vel_y_T.append(vel_y)
     Vm_T.append(vm)
@@ -41,7 +48,7 @@ Vel_x_Bz = []
 Vel_y_Bz = []
 Vm_Bz = []
 for j in range(1, len(Bz)):
-    vel_x, vel_y, vm = pyflct.flct(Bz[j-1], Bz[j], 1*30, 1*48, 5.0)
+    vel_x, vel_y, vm = pyflct.flct(Bz[j-1], Bz[j], delta_t, pixelsize, sigma_pyflct)
     Vel_x_Bz.append(vel_x)
     Vel_y_Bz.append(vel_y)
     Vm_Bz.append(vm)
@@ -53,7 +60,7 @@ Vel_x_Mb = []
 Vel_y_Mb = []
 Vm_Mb = []
 for j in range(1, len(M_b)):
-    vel_x, vel_y, vm = pyflct.flct(M_b[j-1], M_b[j], 1*30, 1*48, 5.0)
+    vel_x, vel_y, vm = pyflct.flct(M_b[j-1], M_b[j], delta_t, pixelsize, sigma_pyflct)
     Vel_x_Mb.append(vel_x)
     Vel_y_Mb.append(vel_y)
     Vm_Mb.append(vm)
