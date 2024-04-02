@@ -89,6 +89,17 @@ def synth(atmos, conserve, prd, stokes, wave, mu, actives):
 
 # Actually test if this works:
 
+# Here we test reading 1D atmosphere for a txt file:
+
+atmos_in = np.loadtxt(sys.argv[1], unpack=True, skiprows=1)
+
+z = atmos_in[1] / 1E2
+T = atmos_in[2]
+vz = np.zeros(len(z))
+vturb = atmos_in[8] / 1E2
+pgas = atmos_in[3] * 10.0
+
+atmos= lw.Atmosphere.make_1d(lw.atmosphere.ScaleType.Geometric, np.copy(z), np.copy(T), np.copy(vz), np.copy(vturb), Pgas=pgas)
+
 wave = np.linspace(588.8, 589.8, 1001)
-atmos = Falc82()
 I = synth(atmos, conserve=False, prd=False, stokes=False, wave=wave*1.000293, mu=1.0, actives='Na')
