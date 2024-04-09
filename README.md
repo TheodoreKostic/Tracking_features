@@ -87,3 +87,15 @@ Various codes that are implementation of feature tracking; Data used comes from 
   <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Corr_calculation.py">Corr_calculation.py</a>, which
   compares aforementioned velocities with the ones from simulation.
 </p>
+
+`9. 4. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/synth/Muram_to_goodform.py">Muram_to_goodform.py</a>, a script that 
+  gives two fits files as result. One contains the MuRAM data reshaped into suitable shape for synth function defined in minimal_synth_muram.py, while 
+  the other reduces the size of test atmosphere another project (due to large CPU usage) and
+  <br>
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/synth/minimal_synth_muram.py">minimal_synth_muram.py</a>,
+  which is supposed to synthesise the spectrum using given z, T, V<sub>z</sub> and P<sub>gas</sub> contained in fits file, thus 
+  giving intensity of spectral line that should be compared to known value in order to determine how valid our code is.
+</p>
