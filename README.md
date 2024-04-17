@@ -99,3 +99,11 @@ Various codes that are implementation of feature tracking; Data used comes from 
   which is supposed to synthesise the spectrum using given z, T, V<sub>z</sub> and P<sub>gas</sub> contained in fits file, thus 
   giving intensity of spectral line that should be compared to known value in order to determine how valid our code is.
 </p>
+
+`17. 4. 2024.`
+<p>
+  Added 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/synth/Muram_1D.py">Muram_1D.py</a> as a fix for previously uploaded
+  Muram_to_goodform.py (might be removed) which didn't account for all values of temperature and pressure correctly, thus neglecting several 
+  parts of Sun's atmosphere in physical sense.
+</p>
