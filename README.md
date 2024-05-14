@@ -131,3 +131,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
     </li>
   </ol> 
 </p>
+
+`14. 5. 2024.`
+<p>
+  The previously added scripts and notebook have been updated to include continuum intensity at 500nm as a new "windowing parameter".
+</p>
