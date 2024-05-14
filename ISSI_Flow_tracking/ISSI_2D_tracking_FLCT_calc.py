@@ -6,8 +6,9 @@ import os
 import pyflct
 from scipy.stats import pearsonr
 from astropy.io import fits
+import time
 
-test_range = 361 # nubmer of slices
+test_range = 99 # nubmer of slices
 # test_range is given in name of the file so that user can
 # know how many slices were used in tracking
 # Thanks to the ISSI team for kindly providing said data!!!!
@@ -16,7 +17,7 @@ Temp = fits.open("ISSI_2D_Tau=1.0-" + str(test_range) + "slices.fits")[0].data
 Bz = fits.open("ISSI_2D_Tau=1.0-" + str(test_range) + "slices.fits")[1].data
 Vx = fits.open("ISSI_2D_Tau=1.0-" + str(test_range) + "slices.fits")[2].data
 Vy = fits.open("ISSI_2D_Tau=1.0-" + str(test_range) + "slices.fits")[3].data
-
+I500 = fits.open("ISSI_2D_Tau=1.0" + str(test_range) + "slices.fits")[4].data
 # Let's do basic comparison of "real" velocities and the ones that FLCT gives
 # between every 2 adjacent files 
 
@@ -42,6 +43,7 @@ for j in range(1, len(Temp)):
     Vel_x_T.append(vel_x)
     Vel_y_T.append(vel_y)
     Vm_T.append(vm)
+    print(time.process_time())
 
 print("Length of Vel_x_T: {}".format(len(Vel_x_T)))
 
@@ -56,6 +58,19 @@ for j in range(1, len(Bz)):
     Vm_Bz.append(vm)
 
 print("Length of Vel_x_Bz: {}".format(len(Vel_x_Bz)))
+
+
+#Now for continuum instensity array
+Vel_x_I = []
+Vel_y_I = []
+Vm_Bz = []
+for j in range(1, len(I500)):
+    vel_x, vel_y, vm = pyflct.flct(I500[j-1], I500[j], delta_t, pixelsize, sigma_pyflct)
+    Vel_x_I.append(vel_x)
+    Vel_y_I.append(vel_y)
+    Vm_I.append(vm)
+
+print("Length of Vel_x_Bz: {}".format(len(Vel_x_I)))
 
 
 # And we can finally write them each to separate fits files
@@ -79,3 +94,12 @@ Bz_v = fits.ImageHDU(Vm_Bz)
 Bz_flct = fits.HDUList([Bz_x, Bz_y, Bz_v])
 Bz_flct.writeto("ISSI_FLCT_magnetic.fits", overwrite = True)
 
+Vel_x_I = np.asarray(Vel_x_I)
+Vel_y_I = np.asarray(Vel_y_I)
+Vm_I = np.asarray(Vm_I)
+
+I_x = fits.PrimaryHDU(Vel_x_I)
+I_y = fits.ImageHDU(Vel_y_I)
+I_v = fits.ImageHDU(Vm_I)
+I_flct = fits.HDUList([I_x, I_y, I_v])
+I_flct.writeto("ISSI_FLCT_intensity.fits", overwrite = True)

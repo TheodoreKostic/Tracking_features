@@ -22,6 +22,11 @@ Vel_x_Bz = fits.open("ISSI_FLCT_magnetic.fits")[0].data
 Vel_y_Bz = fits.open("ISSI_FLCT_magnetic.fits")[1].data
 Vm_Bz = fits.open("ISSI_FLCT_magnetic.fits")[2].data
 
+# FLTC-derived velocities based on intensity 
+Vel_x_I = fits.open("ISSI_FLCT_intensity.fits")[0].data
+Vel_y_I = fits.open("ISSI_FLCT_intensity.fits")[1].data
+Vm_I = fits.open("ISSI_FLCT_intensity.fits")[2].data
+
 # Averaged, i.e mean Vx and Vy
 Vx_mean = []
 Vy_mean = []
@@ -41,10 +46,10 @@ py_1 = []
 # This is for show only
 # It will be updated to run more smoothly
 
-for j in range(1, len(Vel_x_Mb)):
-    p_x = pearsonr(Vx_mean[j-1].flatten(), Vel_x_T[j-1].flatten())
+for j in range(1, len(Vel_x_I)):
+    p_x = pearsonr(Vx_mean[j-1].flatten(), Vel_x_I[j-1].flatten())
     px_1.append(p_x)
-    p_y = pearsonr(Vy_mean[j-1].flatten(), Vel_y_T[j-1].flatten())
+    p_y = pearsonr(Vy_mean[j-1].flatten(), Vel_y_I[j-1].flatten())
     py_1.append(p_y)
     print("Pearson for x:{}".format(p_x))
     print("Pearson for y:{}".format(p_y))
