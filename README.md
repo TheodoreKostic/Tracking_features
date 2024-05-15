@@ -136,3 +136,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>
   The previously added scripts and notebook have been updated to include continuum intensity at 500nm as a new "windowing parameter".
 </p>
+
+`15. 5. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Example.ipynb">Example.ipynb</a> jupyter notebook
+  that uses pyFLCT with I<sub>continuum</sub> as windowing parameter using cadence of 30 s, and FWHM = 1200, 2400 km
+</p>
