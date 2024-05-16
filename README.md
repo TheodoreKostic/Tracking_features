@@ -142,3 +142,12 @@ Various codes that are implementation of feature tracking; Data used comes from 
  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Example.ipynb">Example.ipynb</a> jupyter notebook
   that uses pyFLCT with I<sub>continuum</sub> as windowing parameter using cadence of 30 s, and FWHM = 1200, 2400 km.
 </p>
+
+`16. 5. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Degraded_data_QS.ipynb">Degraded_data_QS.ipynb</a> jupyter notebook
+  that uses pyFLCT with degraded (Convolved with Airy disk of 1m telescope at 500 nm) I<sub>continuum</sub> as windowing parameter for different combinations of cadences and FWHMs. <br>
+  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Degraded_data_QS_testign.ipynb">Degraded_data_QS_testing.ipynb</a> jupyter notebook that is reserved for further testing
+  of this, with Brian's input and advices. So far, it is safe to say that FWHM = 200 km doesn't really track the flows from the simulaton.
+</p>
+
