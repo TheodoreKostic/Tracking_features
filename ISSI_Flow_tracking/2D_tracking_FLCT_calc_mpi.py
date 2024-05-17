@@ -17,6 +17,7 @@ import sys
 threadpool_limits(1)
 from astropy.io import fits
 import pyflct
+import loaders as loaders
 
 class tags(IntEnum):
     """ Class to define the state of a worker.
@@ -115,7 +116,7 @@ def overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size=1):
     success = True
     task_status = [0] * num_tasks
 
-    with tqdm(total=num_tasks-1, ncols=110) as progress_bar:
+    with tqdm(total=num_tasks, ncols=110) as progress_bar:
         
         # While we don't have more closed workers than total workers keep looping
         while closed_workers < num_workers:
@@ -186,10 +187,13 @@ if (__name__ == '__main__'):
     if rank == 0:
 
         # --------------------------------------------------------------------
-        cube = fits.open(sys.argv[1])[0].data
-        delta_t = 10.0
-        pixelsize = 32.0
-        sigma = 800.0 / 1.665 / 32.0
+        #cube = fits.open(sys.argv[1])[0].data
+        delta_t = 10.0 * 3
+        pixelsize = 16.0
+        sigma = 100.0 / 1.665 / pixelsize
+
+        path = '/mnt/c/Users/ivanz/OneDrive/Documents/Muram_ISSI_2D'
+        cube = loaders.load_from_muram_slices(path, 0,150,2, 'Bz', 1.0)
 
         print("info::overseer::input size is: ", cube.shape)
         print("info::overseer::sigma in pixels: ", sigma)
