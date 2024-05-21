@@ -140,7 +140,7 @@ def overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size=1):
                     comm.send(data, dest=source, tag=tags.START)
                     task_status[task_index] = 1
 
-                # If error, or no work left, kill the worker
+                # If error, or no work left, turn off the worker
                 except:
                     comm.send(None, dest=source, tag=tags.EXIT)
 
@@ -157,6 +157,7 @@ def overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size=1):
                     task_writeback = task_writeback_range[task_index]
                     vel_x[task_writeback] = data_in['vel_x']
                     vel_y[task_writeback] = data_in['vel_y']
+                    # We can also put mask somewhere - but we don't use it at the moment
                     progress_bar.update(1)
 
             # if the worker has the exit tag mark it as closed.
