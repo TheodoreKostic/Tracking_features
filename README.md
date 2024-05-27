@@ -151,3 +151,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
   of this, with Brian's input and advices. So far, it is safe to say that FWHM = 200 km doesn't really track the flows from the simulaton.
 </p>
 
+`27. 5. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Two_frames_check.ipynb.ipynb">Two_frames_check.ipynb.ipynb</a> jupyter notebook
+  that will be used to represent the influence of values assinged to cadence and FWHM on the tracking algorithm of FLCT. <br>
+  Minor changes to 2D_tracking_FLCT_calc_mpi.py.
+</p>
