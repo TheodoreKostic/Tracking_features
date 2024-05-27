@@ -191,10 +191,10 @@ if (__name__ == '__main__'):
         #cube = fits.open(sys.argv[1])[0].data
         delta_t = 10.0 * 3
         pixelsize = 16.0
-        sigma = 100.0 / 1.665 / pixelsize
+        sigma = 1200.0 / 1.665 / pixelsize
 
-        path = '/mnt/c/Users/ivanz/OneDrive/Documents/Muram_ISSI_2D'
-        cube = loaders.load_from_muram_slices(path, 0,150,2, 'Bz', 1.0)
+        path = '/home/flow/Documents/ISSI_2D'
+        cube = loaders.load_from_muram_slices(path, 0, 150, 16, 'Bz', 1.0)
 
         print("info::overseer::input size is: ", cube.shape)
         print("info::overseer::sigma in pixels: ", sigma)
