@@ -164,3 +164,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
   debbug discrepancy between two method of loading data - numpy.fromfile and read_slice from muram script. Both are used to open binary files, but the latter one is well-documented, while the
   first one is user-dependent, as in user has to manually test each array to determine which parameter is in question.
 </p>
+
+`4. 6. 2024.`
+<p>
+  Updated Miniexample.ipynb to show (visualise) flow fields as derived using (py)FLCT on the whole timeseries of slices at optical delpth $\tau=0.1$, where continuum intensity at 500 nm was used as windowing parameter. Furthermore, flow field of V<sub>x</sub> derived from FLCT is compared to flow field averaged V<sub>x</sub> that is loaded from simulation. The results so far show that some parts are correctly tracked while others aren't correlated.
+</p>
