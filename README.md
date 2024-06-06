@@ -153,14 +153,14 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 `27. 5. 2024.`
 <p>
- Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Two_frames_check.ipynb">Two_frames_check.ipynb.ipynb</a> jupyter notebook
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Two_frames_check.ipynb">Two_frames_check.ipynb</a> jupyter notebook
   that will be used to represent the influence of values assinged to cadence and FWHM on the tracking algorithm of FLCT. <br>
   Minor changes to 2D_tracking_FLCT_calc_mpi.py.
 </p>
 
 `29. 5. 2024.`
 <p>
-  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Miniexample.ipynb">Miniexample.ipynb.ipynb</a>, jupyter notebook used to
+  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Miniexample.ipynb">Miniexample.ipynb</a>, jupyter notebook used to
   debbug discrepancy between two method of loading data - numpy.fromfile and read_slice from muram script. Both are used to open binary files, but the latter one is well-documented, while the
   first one is user-dependent, as in user has to manually test each array to determine which parameter is in question.
 </p>
@@ -168,4 +168,10 @@ Various codes that are implementation of feature tracking; Data used comes from 
 `4. 6. 2024.`
 <p>
   Updated Miniexample.ipynb to show (visualise) flow fields as derived using (py)FLCT on the whole timeseries of slices at optical delpth $\tau=0.1$, where continuum intensity at 500 nm was used as windowing parameter. Furthermore, flow field of V<sub>x</sub> derived from FLCT is compared to flow field averaged V<sub>x</sub> that is loaded from simulation. The results so far show that some parts are correctly tracked while others aren't correlated.
+</p>
+
+`6. 6. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/MEAN_VEL.py">MEAN_VEL.py</a> python script that 
+ writes V<sub>x</sub> and V<sub>y</sub> into fits file, as well as computes mean values and writes them in separate fits file.
 </p>
