@@ -173,5 +173,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
 `6. 6. 2024.`
 <p>
  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/MEAN_VEL.py">MEAN_VEL.py</a> python script that 
- writes V<sub>x</sub> and V<sub>y</sub> into fits file, as well as computes mean values and writes them in separate fits file.
+ writes V<sub>x</sub> and V<sub>y</sub> into fits file, as well as computes mean values and writes them in separate fits file. <br>
+  Miniexample.ipynb - added function for temporal averaging of series; added comparison between FLCT V<sub>x</sub>, V<sub>y</sub> and filtered
+  simulation V<sub>x</sub>, V<sub>y</sub> (gaussian_filter). <br>
+  <b>CONCLUSION</b> - V<sub>xflct</sub> has high correlation with transposed V<sub>ysimfiltered</sub> and vice versa.
 </p>
