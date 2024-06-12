@@ -178,3 +178,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
   simulation V<sub>x</sub>, V<sub>y</sub> (gaussian_filter). <br>
   <b>CONCLUSION</b> - V<sub>xflct</sub> has high correlation with transposed V<sub>ysimfiltered</sub> and vice versa.
 </p>
+
+`13. 6. 2024.`
+<p>
+  Minor updates to Miniexample.ipynb.
+</p>
+
