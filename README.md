@@ -184,3 +184,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
   Minor updates to Miniexample.ipynb.
 </p>
 
+`19. 6. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Np_fromfile_vs_read.ipynb">Np_fromfile_vs_read.ipynb</a> notebook in which we deduce
+  how to compare V<sub>x</sub> and V<sub>y</sub> from simulation with ones derived by FCLT. It shows what and how to transpose before comparison takes place, as well as 
+  how can variables be introduced so that x can be compared with x, y compared with y.
+</p>
