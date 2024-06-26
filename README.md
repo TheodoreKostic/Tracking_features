@@ -190,3 +190,12 @@ Various codes that are implementation of feature tracking; Data used comes from 
   how to compare V<sub>x</sub> and V<sub>y</sub> from simulation with ones derived by FCLT. It shows what and how to transpose before comparison takes place, as well as 
   how can variables be introduced so that x can be compared with x, y compared with y.
 </p>
+
+`26. 6. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/Meeting_pres.ipynb">Meeting_pres.ipynb</a>, notebook focused on
+  establishing differences between velocities FLCT calculated for cadence of 30s and FWHM = {100, 300, 600, 1200}km. The said velocities have been averaged, and filter
+  was applied to the ones that come directly from simulation in order to see if there is good correlation between pyFLCT and simulation; i.e if tracking works correctly.
+  Furthermore, we have tried to see how size of apodizing window affects tracking while also searching for best $\sigma$ to use for <i>gaussian_filter</i> in order to get the
+  maximum possible correlation.
+</p>
