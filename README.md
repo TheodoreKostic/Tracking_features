@@ -199,3 +199,8 @@ Various codes that are implementation of feature tracking; Data used comes from 
   Furthermore, we have tried to see how size of apodizing window affects tracking while also searching for best $\sigma$ to use for <i>gaussian_filter</i> in order to get the
   maximum possible correlation.
 </p>
+
+`27. 6. 2024.`
+<p>
+ Minor changes to plots in Meeting_pres.ipynb.
+</p>
