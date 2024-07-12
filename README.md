@@ -204,3 +204,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
 <p>
  Minor changes to plots in Meeting_pres.ipynb.
 </p>
+
+`12. 7. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Synth_master/Synth_data_test.ipynb">Synth_data_test.ipynb</a>. It is 
+  a notebook in which we test how FLCT behaves on synthetised spectra, i.e. on different wavelenghts and how it correlates with the ones from simulation.
+</p>
