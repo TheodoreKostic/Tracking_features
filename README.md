@@ -210,3 +210,10 @@ Various codes that are implementation of feature tracking; Data used comes from 
  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Synth_master/Synth_data_test.ipynb">Synth_data_test.ipynb</a>. It is 
   a notebook in which we test how FLCT behaves on synthetised spectra, i.e. on different wavelenghts and how it correlates with the ones from simulation.
 </p>
+
+`14. 7. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Synth_master/Synth_TAU(0.1, 1).ipynb">Synth_TAU(0.1, 1).ipynb  </a>. This is 
+  a notebook in which we tested the correlation between FLCT velocities and  synthetised spectra at different $\lambda$, specifically at those close 
+  to the line centre. The goal is to find at what $\tau$ can we recover flow using spectral lines.
+</p>
