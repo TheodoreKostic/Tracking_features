@@ -220,6 +220,6 @@ Various codes that are implementation of feature tracking; Data used comes from 
 
 `16. 7. 2024.`
 <p>
- Added comparison of FLCT velocities derived from synthetised spectra and FLCT velocities derived from simulation using intensity (cont) as
+Synth_TAU(0.1, 1).ipynb - Added comparison of FLCT velocities derived from synthetised spectra and FLCT velocities derived from simulation using intensity (cont) as
   windowing parameter.
 </p>
