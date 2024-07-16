@@ -217,3 +217,9 @@ Various codes that are implementation of feature tracking; Data used comes from 
   a notebook in which we tested the correlation between FLCT velocities and  synthetised spectra at different $\lambda$, specifically at those close 
   to the line centre. The goal is to find at what $\tau$ can we recover flow using spectral lines.
 </p>
+
+`16. 7. 2024.`
+<p>
+ Added comparison of FLCT velocities derived from synthetised spectra and FLCT velocities derived from simulation using intensity (cont) as
+  windowing parameter.
+</p>
