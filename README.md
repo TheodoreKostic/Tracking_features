@@ -226,5 +226,5 @@ Synth_TAU(0.1, 1).ipynb - Added comparison of FLCT velocities derived from synth
 
 `27. 7. 2024.`
 <p>
-Synth_TAU(0.1, 1).ipynb - Further comparions done. Looking into correlation between intensities used for tracking.
+Synth_TAU(0.1, 1).ipynb - Further comparisons done. Looking into correlation between intensities used for tracking.
 </p>
