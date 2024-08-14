@@ -228,3 +228,9 @@ Synth_TAU(0.1, 1).ipynb - Added comparison of FLCT velocities derived from synth
 <p>
 Synth_TAU(0.1, 1).ipynb - Further comparisons done. Looking into correlation between intensities used for tracking.
 </p>
+
+`14. 8. 2024.`
+<p>
+Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved synthetised spectra compared. 
+  Comparison yields valid results.
+</p>
