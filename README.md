@@ -234,3 +234,11 @@ Synth_TAU(0.1, 1).ipynb - Further comparisons done. Looking into correlation bet
 Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved synthetised spectra compared. 
   Comparison yields valid results.
 </p>
+
+`21. 8. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Synth_master/Convolved.ipynb">Convolved.ipynb<\a> and
+   <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Synth_master/Spektralna_linija.ipynb">Spektralna_linija.ipynb<\a>. First one
+     shows various tests applied to convovled synthetised spectra, while the latter is focused on correlation between FLCT velocities derived
+     from synthetised spectra and simulation velocities at different values of $\log{\tau}$.
+</p>
