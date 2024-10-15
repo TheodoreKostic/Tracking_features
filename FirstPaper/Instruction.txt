@@ -3,10 +3,6 @@
 
 Kod 2D_tracking_FLCT_calc_mpi.py je namesten tako da  
 
-````
-```
-Look! You can see my backticks.
-```
-````
+`import loadersT as loaders`
 
-
+tako da loadersT uzima Temp na nacin na koji si ti napravio za B<sub>z</sub>
