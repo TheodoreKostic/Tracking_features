@@ -242,3 +242,18 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
      shows various tests applied to convovled synthetised spectra, while the latter is focused on correlation between FLCT velocities derived
      from synthetised spectra and simulation velocities at different values of $\log{\tau}$.
 </p>
+
+`13. 10. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Paper.ipynb">Paper.ipynb</a> notebook in which we 
+  compare how continuum intensity (I<sub>cont</sub>), temperature (T) and T<sup>4</sup> differ in behaviour when taken to be
+  windowing parameter. After that, we compute correlation between velocities derived using said parameter and simulation velocities.
+</p>
+
+`18. 10. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Wvls.ipynb">Wvls.ipynb</a>, a notebook that will be
+  used to compare velocities FLCT derived using continuum intensity at 500 nm and velocities FLCT derived from spectra Lightweaver synthetised
+  using different wavelenghts (and spectral line).
+</p>
+
