@@ -257,3 +257,8 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   using different wavelenghts (and spectral line).
 </p>
 
+`18. 10. 2024.`
+<p>
+ Wvls.ipynb updated, intensity at more wavelenghts analysed and compared to continuum intensity at 500 nm from simulation.
+</p>
+
