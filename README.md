@@ -268,3 +268,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   used to compare velocities FLCT derived using continuum intensity at 500 nm and velocities FLCT derived from spectra Lightweaver synthetised
   using different wavelenghts, but using FWHM of 600 km (+ some plotting).
 </p>
+
+`25. 10. 2024.`
+<p>
+ Wvls600.ipynb updated, intensity at more wavelenghts analysed and compared to continuum intensity at 500 nm from simulation. Plotted I<sub>LW</sub>
+  and I<sub>cont500</sub>, both used for tracking. Preliminary results show that intensity at most of $\lambda$-s can be used equally as the one 
+  from simulation.
+</p>
