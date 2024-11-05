@@ -275,3 +275,9 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   and I<sub>cont500</sub>, both used for tracking. Preliminary results show that intensity at most of $\lambda$-s can be used equally as the one 
   from simulation.
 </p>
+
+`5. 11. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/TimeAvg.ipynb">TimeAvg.ipynb</a>, where
+  we shall store plots, calculation of correlation coefficients and test how time averaging impacts the correlation. 
+</p>
