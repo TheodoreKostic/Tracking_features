@@ -286,5 +286,6 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 <p>
  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/100_fits_test.ipynb">100_fits_test.ipynb</a>. It features
   comparison of FLCT velocities that result from tracking on Lightweaver synthetised intensity at 500 nm, on MURaM simulated continuum intensity and 
-  on MURaM simulated continuum intensity when timestep between two adjacent snapshots is increased. 
+  on MURaM simulated continuum intensity when timestep between two adjacent snapshots is increased. At the moment, it seems an error has occured during
+  tracking on synthetised spectrum.
 </p>
