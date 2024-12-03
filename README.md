@@ -289,3 +289,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   on MURaM simulated continuum intensity when timestep between two adjacent snapshots is increased. At the moment, it seems an error has occured during
   tracking on synthetised spectrum.
 </p>
+
+`03. 12. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Checkup_timeavg.ipynb">Checkup_timeavg.ipynb</a>. Analysis of how
+  choice of cadence and later choice of FWHM for Gaussian with which we convolve temporaly averaged velocities impacts the correlation between velocities with cadence 10 s,
+  and velocities with cadence {20, 30, 40, 50, 60}s for 3 cases - FWHM = {300, 600, 1200} km.
+</p>
