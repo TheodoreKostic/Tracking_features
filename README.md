@@ -296,3 +296,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   choice of cadence and later choice of FWHM for Gaussian with which we convolve temporaly averaged velocities impacts the correlation between velocities with cadence 10 s,
   and velocities with cadence {20, 30, 40, 50, 60}s for 3 cases - FWHM = {300, 600, 1200} km.
 </p>
+
+`12. 12. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Separate.ipynb">Separate.ipynb</a>. 
+  Tracked first pair and fourth pair of LW series at 500 nm and compared them to first and fourth element of all velocities that
+  result from tracking MURaM intensity using FWHM = 600 km and cadence = 30 s.
+</p>
