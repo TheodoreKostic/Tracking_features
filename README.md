@@ -303,3 +303,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Tracked first pair and fourth pair of LW series at 500 nm and compared them to first and fourth element of all velocities that
   result from tracking MURaM intensity using FWHM = 600 km and cadence = 30 s.
 </p>
+
+`20. 12. 2024.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Lightweaver_31steps.ipynb">Lightweaver_31steps.ipynb</a>. 
+  Comparison of MURaM simulation velocities, FLCT velocities that result from tracking Lightweaver intensity at 500nm and FLCT velocities that
+  result from tracking MURaM intensity at 500 nm. Tracking Lightweaver intensity proves to be difficult.
+</p>
