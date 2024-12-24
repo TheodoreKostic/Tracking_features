@@ -15,9 +15,9 @@ vz = mio.MuramCube(os.getcwd(), iter, 'vx')
 vturb = np.zeros(len(vz))
 
 i_start = 0
-i_end = 128
+i_end = 32
 j_start = 0
-j_end = 128
+j_end = 32
 
 temp = T[360:480,i_start:i_end,j_start:j_end]
 print("The shape of temperature due to focusing on photosphere:{} ".format(np.shape(temp)))
@@ -30,16 +30,7 @@ NZ, NY, NX = temp.shape
 # Given that we are interested in photosphere, we are limiting the range of temperature
 
 temp[np.where(temp<2100.)] = 2100.
-temp[np.where(temp>20000.)] = 20000.
-''' for i in range(NZ):
-	for j in range(NY):
-		for k in range(NX):
-			if temp[i][j][k] < 2000:
-				temp[i][j][k] = 2000
-			elif temp[i][j][k] > 20000:
-				temp[i][j][k] = 20000
-			else:
-				temp[i][j][k] = temp[i][j][k] '''
+#temp[np.where(temp>20000.)] = 20000.
 
 print("The amount of time it takes to complete for loop in seconds:{}".format(time.process_time()))
 #z = np.linspace(0, 16000, num = 480, endpoint = True)
@@ -58,11 +49,6 @@ atmoscube = np.concatenate((z[None,:,:,:], (temp[None,:,:,:]), (Pgas[None,:,:,:]
 
 print("The the final shape is:{} ".format(np.shape(atmoscube)))
 
-'''one = fits.PrimaryHDU(temp)
-two = fits.ImageHDU(Pgas)
-three = fits.ImageHDU(Vz)
-four = fits.ImageHDU(z)
-tot = fits.HDUList([one, two, three, four])'''
 tot = fits.PrimaryHDU(atmoscube)
 tot.writeto("muram_fixed.fits", overwrite = True)
 print("Finished")

@@ -6,7 +6,7 @@ import lightweaver as lw
 from lightweaver.fal import Falc82 # essentially not needed 
 
 from lightweaver.rh_atoms import H_6_atom, C_atom, O_atom, Si_atom, Al_atom, \
-CaII_atom, Fe_atom, He_9_atom, MgII_atom, N_atom, NaI_fine_atom, S_atom # Specific atomic models that cover most of 
+CaII_atom, Fe23_atom, He_9_atom, MgII_atom, N_atom, NaI_fine_atom, S_atom # Specific atomic models that cover most of 
                                                                         # of the spectral lines studied in solar physccs 
 
 import matplotlib.pyplot as plt
@@ -48,7 +48,7 @@ def synth(atmos, conserve, prd, stokes, wave, mu, actives):
     
     # Configure the set of atomic models to use. Contrary to SNAPI you have to explicitly specify all species
     # Annoying, but since you have all the atoms in the file - that is fine.
-    aSet = lw.RadiativeSet([H_6_atom(), C_atom(), O_atom(), Si_atom(), Al_atom(), CaII_atom(), Fe_atom(), He_9_atom(), MgII_atom(), N_atom(), NaI_fine_atom(), S_atom()])
+    aSet = lw.RadiativeSet([H_6_atom(), C_atom(), O_atom(), Si_atom(), Al_atom(), CaII_atom(), Fe23_atom(), He_9_atom(), MgII_atom(), N_atom(), NaI_fine_atom(), S_atom()])
     
     # Set actives to the ones you have inputted.
     aSet.set_active(actives)
@@ -69,11 +69,15 @@ def synth(atmos, conserve, prd, stokes, wave, mu, actives):
     # Iterate the Context to convergence (using the iteration function now
  	# provided by Lightweaver). Go test this one in order to calculate stuff in LTE!
     
-    lw.iterate_ctx_se(ctx, prd=prd)
+    #lw.iterate_ctx_se(ctx, prd=prd)
+    #lw.iterate_ctx_se(ctx, prd=prd, quiet=True)
+
+    ctx.formal_sol_gamma_matrices()
+
     
     # Update the background populations based on the converged solution and
     # compute the final intensity for mu=1 on the provided wavelength grid.
-    eqPops.update_lte_atoms_Hmin_pops(atmos)
+    #eqPops.update_lte_atoms_Hmin_pops(atmos)
     
     # Calculate the (stokes) spectru, at the provided wavegrid at the specified mu
     Iwave = ctx.compute_rays(wave, [mu], stokes=stokes) 
@@ -101,5 +105,6 @@ pgas = atmos_in[3] * 10.0
 
 atmos= lw.Atmosphere.make_1d(lw.atmosphere.ScaleType.Geometric, np.copy(z), np.copy(T), np.copy(vz), np.copy(vturb), Pgas=pgas)
 
-wave = np.linspace(588.8, 589.8, 1001)
-I = synth(atmos, conserve=False, prd=False, stokes=False, wave=wave*1.000293, mu=1.0, actives='Na')
+#wave = np.linspace(588.8, 589.8, 1001)
+wave = np.linspace(630.0,630.4,401)
+I = synth(atmos, conserve=False, prd=False, stokes=False, wave=wave*1.000275, mu=1.0, actives='Fe')
