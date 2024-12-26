@@ -43,12 +43,13 @@ def load_from_lw_fits(path, start, step, number, wvl):
 		if (i==0):
 			cube = test.reshape(1,1536,1536)
 			qs = np.mean(cube)
+			print("info::load_from_lw_fits::normalizing each image with:  ", qs)		
 			cube /= qs
 
 		else:
 			cube = np.append(cube,test[None,:,:]/qs,axis=0)
 			test = None 
 
-	print("info::load_from_muram_slices::final cube size is: ", cube.shape)
+	print("info::load_from_lw_fits::final cube size is: ", cube.shape)
 	return cube
 
