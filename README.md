@@ -310,3 +310,12 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Comparison of MURaM simulation velocities, FLCT velocities that result from tracking Lightweaver intensity at 500nm and FLCT velocities that
   result from tracking MURaM intensity at 500 nm. Tracking Lightweaver intensity proves to be difficult.
 </p>
+
+`28. 12. 2024.`
+<p>
+  Updated 31 steps notebook. Analysed the velocities tracked at 3 different wavelengths that correspond to Section 3.2.
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/I_min_map.py">I_min_map.py</a> and 
+  <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/I_minimum_tracking">I_minimum_tracking.py</a>. These
+  scripts are meant to locate wavelength at which intensity reaches minimal values, take those intensity maps and write them to 
+  new files on which tracking will be possible.
+</p>
