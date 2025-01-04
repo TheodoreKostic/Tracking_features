@@ -319,3 +319,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   scripts are meant to locate wavelength at which intensity reaches minimal value, take those intensity maps and write them to 
   new files on which tracking will be possible.
 </p>
+
+`05. 01. 2025.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/FixedWavelenth.ipynb">FixedWavelenth.ipynb</a> that 
+  makes use of results from previosly added python scripts for fixed wavelength tracking. Right now, only FWHM = 600 km have been obtained. FWHM = 300 km
+  is work in progress.
+</p>
