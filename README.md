@@ -326,3 +326,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   makes use of results from previosly added python scripts for fixed wavelength tracking. Right now, only FWHM = 600 km have been obtained. FWHM = 300 km
   is work in progress.
 </p>
+
+`11. 01. 2025.`
+<p>
+ Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Temp_and_Bz_vs_SIM.ipynb">Temp_and_Bz_vs_SIM.ipynb</a> that 
+  deals with comparison of FLCT FWHM = 600 km, cadence = 10 s results from B<sub>z</sub> and MURaM simulation velocities at $\log\tau = {-1, -2, -3}$. The files 
+  that result from applying FLCT on Temperature at these $\tau$ values will be added later.
+</p>
