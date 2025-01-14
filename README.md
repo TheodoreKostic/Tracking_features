@@ -339,3 +339,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
  Temp_and_Bz_vs_SIM.ipynb updated. <br> 
   Comparison of FLCT FWHM = 600 km, cadence = 10 s results from Temperature and MURaM simulation velocities at $\log\tau = \{-1, -2, -3\}$ added.
 </p>
+
+`14. 01. 2025.`
+<p>
+ Temp_and_Bz_vs_SIM.ipynb updated. <br> 
+  Comparison of FLCT FWHM = 600 km, cadence = 10 s results from Temperature and MURaM simulation velocities at $\log\tau = 0$ added, as
+  well as comparison of FLCT B<sub>z</sub> and MURaM simulation velocities at $\log\tau = -4$.
+</p>
