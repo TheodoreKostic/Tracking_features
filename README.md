@@ -346,3 +346,11 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Comparison of FLCT FWHM = 600 km, cadence = 10 s results from Temperature and MURaM simulation velocities at $\log\tau = 0$ added, as
   well as comparison of FLCT B<sub>z</sub> and MURaM simulation velocities at $\log\tau = -4$.
 </p>
+
+`15. 01. 2025.`
+<p>
+ Temp_and_Bz_vs_SIM.ipynb updated. <br> 
+  Comparison of FLCT FWHM = 600 km, cadence = 10 s results from Temperature and Intensity at 500 nm, and MURaM velocities
+  at $\log\tau = 0$ done. Conclusion is that intensity is better choice as tracking parameter due to artefacts that can
+  be seen in temperature.
+</p>
