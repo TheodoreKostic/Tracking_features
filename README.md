@@ -357,5 +357,5 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 
 `24. 01. 2025.`
 <p>
- TimeAvg notebook updated with results for tracking B<sub>z</sub> at $\log\tau = 0$ for dt = 10 s.
+ TimeAvg.ipynb notebook updated with results for tracking B<sub>z</sub> at $\log\tau = 0$ for dt = 10 s.
 </p>
