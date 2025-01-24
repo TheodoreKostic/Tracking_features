@@ -354,3 +354,8 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   at $\log\tau = 0$ done. Conclusion is that intensity is better choice as tracking parameter due to artefacts that can
   be seen in temperature.
 </p>
+
+`24. 01. 2025.`
+<p>
+ TimeAvg notebook updated with results for tracking B<sub>z</sub> at $\log\tau = 0$ for dt = 10 s.
+</p>
