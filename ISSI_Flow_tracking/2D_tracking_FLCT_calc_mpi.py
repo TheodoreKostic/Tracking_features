@@ -81,7 +81,7 @@ def worker_work(rank):
 
     comm.send(None, dest=0, tag=tags.EXIT)
 
-def overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size=1):
+def overseer_work(cube, delta_t, pixelsize, sigma, outputfilename, task_grain_size=1):
     """ Function to define the work to do by the overseer """
 
     # Index of the task to keep track of each job
@@ -170,7 +170,7 @@ def overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size=1):
     vxhdu = fits.PrimaryHDU(vel_x)
     vyhdu = fits.ImageHDU(vel_y)
     to_output = fits.HDUList([vxhdu, vyhdu])
-    to_output.writeto(sys.argv[1][:-5]+'_tracked.fits', overwrite=True)
+    to_output.writeto(outputfilename, overwrite=True)
 
 
 # -----------------------------------------------------------------------------------
@@ -189,9 +189,6 @@ if (__name__ == '__main__'):
 
         # --------------------------------------------------------------------
         #cube = fits.open(sys.argv[1])[0].data
-        delta_t = 10.0 * 3
-        pixelsize = 16.0
-
         path = sys.argv[1]
         
         FWHM = float(sys.argv[2])
@@ -199,15 +196,16 @@ if (__name__ == '__main__'):
         depth = sys.argv[4]
         delta_t = float(sys.argv[5])
         pixelsize = float(sys.argv[6])
+        l = int(sys.argv[7])
         
         sigma = FWHM / 1.665 / pixelsize
-        #cube = loaders.load_from_muram_slices(path, 0, 150, 7, parameter, depth)
-        cube = loaders.load_from_lw_fits(path, 0, 150, 7, 21)
-
-        print("info::overseer::input size is: ", cube.shape)
         print("info::overseer::sigma in pixels: ", sigma)
-
-        overseer_work(cube, delta_t, pixelsize, sigma, task_grain_size = 1)
+        cube = loaders.load_from_muram_slices(path, 0, 50, 91, parameter, depth)
+        #for l in range(22,72):
+        #cube = loaders.load_from_lw_fits(path, 0, 150, 31, l)
+        print("info::overseer::input size is: ", cube.shape)
+        outputfilename = sys.argv[8]+'_'+str(l)+'.fits'
+        overseer_work(cube, delta_t, pixelsize, sigma, outputfilename, task_grain_size = 1)
     else:
         worker_work(rank)
         pass
