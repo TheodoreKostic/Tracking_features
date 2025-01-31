@@ -365,5 +365,6 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
  Added <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Planck_and_Bz_vs_SIM.ipynb">Planck_and_Bz_vs_SIM.ipynb</a> that 
   deals with comparison of FLCT FWHM = 600 km, cadence = 30 s results from B<sub>z</sub> and MURaM simulation velocities at $\log\tau = \{-1, -2, -3\}$. 
   Comparison of FLCT FWHM = 600 km, cadence = 30 s results from Planck's function and MURaM simulation velocities at $\log\tau = \{-1, -2, -3\}$ used instead
-  of ones that result from tracking Temperature because B<sub>$\lambda$</sub> more closely resembles "Radiation Intensity".
+  of ones that result from tracking Temperature because B<sub>$\lambda$</sub> more closely resembles "Radiation Intensity" - what we would get by tracking
+  intensity.
 </p>
