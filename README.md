@@ -368,3 +368,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   of ones that result from tracking Temperature because B<sub>$\lambda$</sub> more closely resembles "Radiation Intensity" - what we would get by tracking
   intensity.
 </p>
+
+`18. 02. 2025.`
+<p>
+  Comparison of FLCT FWHM = {300, 600}km, cadence = 30 s results from B<sub>z</sub> and Temperature vs. MURaM simulation velocities at $\log\tau = \{-1, -2, -3. -4\}$.
+  We conclude that B<sub>z</sub> is much better choice than temperature, because B<sub>z</sub> largely changes due to an advection process, while $T$ experinces strong 
+  contributions due to radiation transport.
+</p>
