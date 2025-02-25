@@ -373,5 +373,5 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 <p>
   Comparison of FLCT FWHM = {300, 600}km, cadence = 30 s results from B<sub>z</sub> and Temperature vs. MURaM simulation velocities at $\log\tau = \{-1, -2, -3. -4\}$.
   We conclude that B<sub>z</sub> is much better choice than temperature, because B<sub>z</sub> largely changes due to an advection process, while $T$ experinces strong 
-  contributions due to radiation transport.
+  contributions due to radiative transport.
 </p>
