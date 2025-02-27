@@ -375,3 +375,9 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   We conclude that B<sub>z</sub> is much better choice than temperature, because B<sub>z</sub> largely changes due to an advection process, while $T$ experinces strong 
   contributions due to radiative transport.
 </p>
+
+`27. 02. 2025.`
+<p>
+  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Synth_snapi.ipynb">Synth_snapi.ipynb</a> in which
+  testing and visualization of synthesized data (spectral lines) will be done.
+</p>
