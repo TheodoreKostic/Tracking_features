@@ -381,3 +381,9 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Synth_snapi.ipynb">Synth_snapi.ipynb</a> in which
   testing and visualization of synthesized data (spectral lines) will be done.
 </p>
+
+`28. 02. 2025.`
+<p>
+ Synth_snapi updated with comparison of ME inversion B<sub>z</sub>s for Fe I 5250 nm and Mg I b2 5172 nm with B<sub>z</sub>s 
+  at $\log\tau = \{0, -1, -2, -3\}$.
+</p>
