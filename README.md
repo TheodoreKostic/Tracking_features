@@ -384,6 +384,6 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 
 `28. 02. 2025.`
 <p>
- Synth_snapi updated with comparison of ME inversion B<sub>z</sub>s for Fe I 5250 nm and Mg I b2 5172 nm with B<sub>z</sub>s 
+ Synth_snapi updated with comparison of ME inversion B<sub>z</sub>-s for Fe I 5250 nm and Mg I b2 5172 nm with B<sub>z</sub>-s 
   at $\log\tau = \{0, -1, -2, -3\}$.
 </p>
