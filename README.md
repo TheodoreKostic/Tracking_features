@@ -384,6 +384,14 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 
 `28. 02. 2025.`
 <p>
- Synth_snapi updated with comparison of ME inversion B<sub>z</sub>-s for Fe I 5250 nm and Mg I b2 5172 nm with B<sub>z</sub>-s 
+ Synth_snapi updated with comparison of ME inversion B<sub>z</sub>-s for Fe I 525.0 nm and Mg I b2 517.2 nm with B<sub>z</sub>-s 
   at $\log\tau = \{0, -1, -2, -3\}$.
+</p>
+
+`06. 03. 2025.`
+<p>
+  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/ISSI_Flow_tracking/FLCT_Thresh.ipynb">FLCT_Thresh.ipynb</a>.
+  Here we test the effect threshold has on resulting horizontal velocities in FLCT when B<sub>z</sub> is tracking parameter. Two chosen values are 50 Gauss and 100 Gauss
+  and correlation with MURaM V<sub>x</sub> and V<sub>y</sub> is given for both. Analysis suggests that inculding threshold (excluding pixels below threshold values in FLCT
+  calculation) actually descreases correlation with original velocities. 
 </p>
