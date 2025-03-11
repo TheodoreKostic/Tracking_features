@@ -395,3 +395,9 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   and correlation with MURaM V<sub>x</sub> and V<sub>y</sub> is given for both. Analysis suggests that inculding threshold (excluding pixels below threshold values in FLCT
   calculation) actually descreases correlation with original velocities. 
 </p>
+
+`11. 03. 2025.`
+<p>
+  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/ME_Bz_track.py">ME_Bz_track.py</a>.
+  This is a short script for tracking Bz inferred using ME inversion of Fe I and Mg I b2 spectral lines.
+</p>
