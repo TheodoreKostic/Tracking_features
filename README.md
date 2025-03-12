@@ -404,6 +404,6 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 
 `12. 03. 2025.`
 <p>
-  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/MilneEddington_Bz_tracking.ipynbk.py">MilneEddington_Bz_tracking.ipynb</a>.
+  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/MilneEddington_Bz_tracking.ipynb">MilneEddington_Bz_tracking.ipynb</a>.
   Notebook in which we visualize tracking results (from Bz inferred using ME inversion of Fe I and Mg I b2 spectral lines).
 </p>
