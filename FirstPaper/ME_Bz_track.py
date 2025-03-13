@@ -30,9 +30,9 @@ BZ = [] #Bz array
 # FLCT settings
 fwhm = 600.0 #km
 delta_t = 10.0 * 3 #s
-pixelsize = 16.0 #km
+pixelsize = 32.0 #km because we compare to (768, 768)
 sigma = fwhm/1.665/pixelsize # Gaussian
-
+print("Sigma: {}".format(sigma))
 cube = fits.open("loc_dyn_32_32_16_series_tumag_l2.fits")[0].data
 for i in tqdm(range(1, len(cube))):
 	B1 = np.copy(cube[i-1,:,:,0] * np.cos(cube[i-1,:,:,1])) # take inclination into consideration
