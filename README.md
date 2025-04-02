@@ -419,3 +419,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Various updates with goal of improving visual representation of results. Trying new statistic tests.
 </p>
 
+`02. 04. 2025.`
+<p>
+ Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Final_plot_table.ipynb">Final_plot_table.ipynb</a>.
+  Notebook in which we visualize tracking results from Bz inferred in weak-field approximation applied to Mg I b2 spectral line and
+  Bz inferred using ME inversion of Fe I, all at one place.
+</p>
+
