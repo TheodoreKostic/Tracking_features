@@ -426,3 +426,7 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   Bz inferred using ME inversion of Fe I, all at one place.
 </p>
 
+`06. 04. 2025.`
+<p>
+  A few updates regarding curl calculation in python.
+</p>
