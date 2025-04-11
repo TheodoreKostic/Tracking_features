@@ -428,5 +428,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 
 `06. 04. 2025.`
 <p>
-  A few updates regarding curl calculation in python.
+  A few updates regarding curl calculation in python. Also added .png-s.
+</p>
+
+`11. 04. 2025.`
+<p>
+  A lot of minor visual changes to plots, labels and their sizes in some notebooks for clarity. 
 </p>
