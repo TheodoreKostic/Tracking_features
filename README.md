@@ -431,7 +431,14 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   A few updates regarding curl calculation in python. Also added .png-s.
 </p>
 
+
 `11. 04. 2025.`
 <p>
   A lot of minor visual changes to plots, labels and their sizes in some notebooks for clarity. 
+</p>
+
+`16. 04. 2025.`
+<p>
+ Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Appendix.ipynb">Appendix.ipynb</a>,
+  where all work related to LOS velocity will be stored.
 </p>
