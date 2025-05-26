@@ -442,3 +442,22 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
  Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Appendix.ipynb">Appendix.ipynb</a>,
   where all work related to LOS velocity will be stored.
 </p>
+
+`26. 05. 2025.`
+<p>
+  Final_plot_table notebook updated:
+  <ul>
+    <li>
+      Added functions that determine divergence and vorticity of flows
+    </li>
+    <li>
+      Calculated divergence and vorticity from tracked velocities and compared to simulations
+    </li>
+    <li>
+      Plotted those fields
+    </li>
+    <li>
+      Determined the power of vorticity and power of divergence - their difference is negative; what this implies remains to be determined 
+    </li>
+  <\ul>
+</p>
