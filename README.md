@@ -459,5 +459,4 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
     <li>
       Determined the power of vorticity and power of divergence - their difference is negative; what this implies remains to be determined 
     </li>
-  <\ul>
 </p>
