@@ -460,3 +460,11 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
       Determined the power of vorticity and power of divergence - their difference is negative; what this implies remains to be determined 
     </li>
 </p>
+
+
+`19. 06. 2025.`
+<p>
+ Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/FirstPaper/Power_curl.ipynb">Power_curl.ipynb</a>,
+  where sum(|div($v$)|^2)/area and sum(|curl($v$)|^2)/area are calculated. Correlation between div. of ground-truth flows (MURaM velocities) and 
+  div. of FLCT-inferred is significantly better if FLCT velocity field is smoothed before computing its divergence
+</p>
