@@ -468,3 +468,10 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
   where sum(|div($v$)|<sup>2</sup>)/area and sum(|curl($v$)|<sup>2</sup>)/area are calculated. Correlation between div. of ground-truth flows (MURaM velocities) and 
   div. of FLCT-inferred is significantly better if FLCT velocity field is smoothed before computing its divergence.
 </p>
+
+`30. 06. 2025.`
+<p>
+ Uploaded <a href = "https://github.com/TheodoreKostic/Tracking_features/blob/main/Video.ipynb">Video.ipynb</a>,
+  where we use time-series of MURaM velocities and ME (or WFA) inversion $B_z$ from which FLCT infers velocities to
+  create a short video (time-lapse).
+</p>
