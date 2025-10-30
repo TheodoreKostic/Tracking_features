@@ -479,5 +479,5 @@ Synth_TAU(0.1, 1).ipynb - RMS contrast for synthetised spectra and convolved syn
 `01. 07. 2025.` - `18. 10. 2025.`
 <p>
  Various calculations and plotting. Subscript <i>500</i> added for all instances of $\tau$. Suggestions for clarity implemented.
-  Divergence and curl of FLCT velocities needs to be additionally smoothed before direct comparison. 
+  Divergence and curl of FLCT velocities need to be additionally smoothed before direct comparison. 
 </p>
